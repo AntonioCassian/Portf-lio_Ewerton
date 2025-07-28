@@ -8,7 +8,7 @@ import { Experiencia } from "../components/Experiencia";
 export const Sobre = () => {
   return (
     <>
-      <main className="flex flex-col gap-5 p-2 mt-5 md:flex-row">
+      <main className="flex flex-col gap-5 p-1 mt-5 sm:p-2 md:flex-row">
         <div className="flex-1">
           <div
             className="relative h-[100%] w-[440px] bg-contain bg-center bg-no-repeat z-[9999] overflow-hidden hidden lg:block"

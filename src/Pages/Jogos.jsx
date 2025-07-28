@@ -15,7 +15,7 @@ export const Jogos = () => {
     {
       id: 1,
       imagem: Uebity,
-      name: "Uebity",
+      name: "Grief",
       link: "https://wertongomes.github.io/Grief-TLSS",
     },
   ];
