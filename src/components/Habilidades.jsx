@@ -22,7 +22,7 @@ export const Habilidades = () => {
     <>
       <h2 className="mt-4 text-4xl">Habilidades</h2>
       <Line />
-      <ul className="grid grid-cols-1 gap-4 mt-2 sm:grid-cols-2 md:grid-cols-3">
+      <ul className="grid grid-cols-2 gap-4 mt-2 sm:grid-cols-2 md:grid-cols-3">
         {habArray.map((hab) => (
         <li key={hab.id} className="flex flex-col items-center justify-center">
             <IconHab icone={hab.icone} name={hab.name} />

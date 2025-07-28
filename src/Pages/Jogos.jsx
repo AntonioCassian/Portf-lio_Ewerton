@@ -2,6 +2,7 @@ import { Line } from "../components/Line";
 import Uebity from "../assets/jogos/uebeti.png";
 import { IconHab } from "../components/IconHab";
 import { useState } from "react";
+import { Footer } from "../components/Footer";
 
 export const Jogos = () => {
   const Lista_Jogos = [
@@ -13,30 +14,6 @@ export const Jogos = () => {
     },
     {
       id: 1,
-      imagem: Uebity,
-      name: "Uebity",
-      link: "https://wertongomes.github.io/Grief-TLSS",
-    },
-    {
-      id: 2,
-      imagem: Uebity,
-      name: "Uebity",
-      link: "https://wertongomes.github.io/Grief-TLSS",
-    },
-    {
-      id: 3,
-      imagem: Uebity,
-      name: "Uebity",
-      link: "https://wertongomes.github.io/Grief-TLSS",
-    },
-    {
-      id: 4,
-      imagem: Uebity,
-      name: "Uebity",
-      link: "https://wertongomes.github.io/Grief-TLSS",
-    },
-    {
-      id: 6,
       imagem: Uebity,
       name: "Uebity",
       link: "https://wertongomes.github.io/Grief-TLSS",
@@ -71,10 +48,10 @@ export const Jogos = () => {
 
   return (
     <>
-      <main className="pt-8 pr-14 pl-14">
+      <main className="h-[calc(100%-64px)] pt-8 pr-14 pl-14 relative">
         {chunkedGames.map((grupo, index) => (
-          <div key={index} className="mb-6">
-            <div className="grid grid-cols-4 gap-4">
+          <div key={index} className="relative w-full h-full mb-6">
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
               {grupo.map((item) => (
                 <div key={item.id}>
                   <IconHab
@@ -90,9 +67,11 @@ export const Jogos = () => {
               ))}
             </div>
 
-            {/* Linha reta que ocupa todo o espaço */}
             <div className="w-full mt-4">
               <Line />
+            </div>
+            <div className="absolute w-full bottom-2">
+              <Footer />
             </div>
           </div>
         ))}
@@ -100,7 +79,7 @@ export const Jogos = () => {
 
       <>
         {open && (
-          <div className="fixed top-0 bottom-0 left-0 right-0 bg-blue-950 z-[900] bg-opacity-40 backdrop-blur-2xl">
+          <div className="fixed top-0 bottom-0 left-0 right-0  z-[900] bg-opacity-40 backdrop-blur-2xl">
             <div
               className="absolute right-3.5 text-2xl top-2.5 text-amber-50 cursor-pointer"
               onClick={() => setOpen(false)}
@@ -108,7 +87,7 @@ export const Jogos = () => {
               X
             </div>
             <div className="flex items-center justify-center w-full h-full">
-              <div className="h-full w-4xl">
+              <div className="w-full h-full">
                 <iframe
                   width={"100%"}
                   height={"100%"}

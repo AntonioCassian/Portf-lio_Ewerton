@@ -6,7 +6,7 @@ import { Projetos } from "./Pages/Projetos";
 
 function App() {
   const sections = ["Projetos", "Sobre", "Jogos"];
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(1);
   return (
     <>
       <Header
