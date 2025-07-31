@@ -1,25 +1,11 @@
 import { Line } from "../components/Line";
-import Uebity from "../assets/jogos/uebeti.png";
 import { IconHab } from "../components/IconHab";
 import { useState } from "react";
 import { Footer } from "../components/Footer";
+import { ListaProjetos } from "../lib/Lista_projetos";
 
 export const Projetos = () => {
-  const Lista_Jogos = [
-    {
-      id: 0,
-      imagem: Uebity,
-      name: "Uebity",
-      link: "https://ewertonslv.artstation.com/projects/GvP9Oz",
-    },
-    {
-      id: 1,
-      imagem: Uebity,
-      name: "Grief",
-      link: "https://ewertonslv.artstation.com/projects/eRv92J",
-    },
-  ];
-
+ 
   const [open, setOpen] = useState(false);
   const [selectedGame, setSelectedGame] = useState("");
   const handleOpen = (link) => {
@@ -42,8 +28,8 @@ export const Projetos = () => {
   //   }
   // }, [open]);
   const chunkedGames = [];
-  for (let i = 0; i < Lista_Jogos.length; i += 4) {
-    chunkedGames.push(Lista_Jogos.slice(i, i + 4));
+  for (let i = 0; i < ListaProjetos.length; i += 4) {
+    chunkedGames.push(ListaProjetos.slice(i, i + 4));
   }
 
   return (

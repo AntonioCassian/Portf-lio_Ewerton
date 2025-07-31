@@ -1,25 +1,11 @@
 import { Line } from "../components/Line";
-import Uebity from "../assets/jogos/uebeti.png";
 import { IconHab } from "../components/IconHab";
 import { useState } from "react";
 import { Footer } from "../components/Footer";
+import { Lista_Jogos } from "../lib/Lista_jogos";
 
 export const Jogos = () => {
-  const Lista_Jogos = [
-    {
-      id: 0,
-      imagem: Uebity,
-      name: "Uebity",
-      link: "https://wertongomes.github.io/Uebeti/",
-    },
-    {
-      id: 1,
-      imagem: Uebity,
-      name: "Grief",
-      link: "https://wertongomes.github.io/Grief-TLSS",
-    },
-  ];
-
+  
   const [open, setOpen] = useState(false);
   const [selectedGame, setSelectedGame] = useState("");
   const handleOpen = (link) => {
